@@ -1,5 +1,5 @@
 # Calculators
-- The Repository Containes 2 Projects.
+- The Repository Contains 2 Projects.
 - Both are built using JavaScript.
 # Project 1 - Interest Calculator
 - Project 1 is to Calculate Simple and Compound Interest
