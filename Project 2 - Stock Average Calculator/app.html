@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stock-average-calc-style.css">
+    <title>Stock Average Calculator</title>
+</head>
+<body>
+<div class="app-container">
+    <div id="field-container" class="field-container">
+        <div id="repeater" class="repeater">
+            <span class="stock-ind-no">1</span>
+            <div class="stock-unit-c">
+                <label for="stock-unit" class="stock-label">Unit</label>
+                <input type="number" name="stock-unit" id="stock-unit-1" class="stock-unit u1">
+                <p class="stock-calc-error eu1">This field is required.</p>
+            </div>
+            <div class="stock-cost-c">
+                <label for="stock-cost" class="stock-label">Cost</label>
+                <input type="number" name="stock-cost" id="stock-cost-1" class="stock-cost c1">
+                <p class="stock-calc-error ec1">This field is required.</p>
+            </div>
+            <div class="stock-total-inv">
+                <p class="heading-ti">Your Investment:</p>
+                <div id="result-ti" class="result-ti single-inv1"></div>
+            </div>
+        </div>
+        <div id="repeater" class="repeater">
+            <span class="stock-ind-no">2</span>
+            <div class="stock-unit-c">
+                <label for="stock-unit" class="stock-label">Unit</label>
+                <input type="number" name="stock-unit" id="stock-unit-2" class="stock-unit u2">
+                <p class="stock-calc-error eu2">This field is required.</p>
+            </div>
+            <div class="stock-cost-c">
+                <label for="stock-cost" class="stock-label">Cost</label>
+                <input type="number" name="stock-cost" id="stock-cost-2" class="stock-cost c2">
+                <p class="stock-calc-error ec2">This field is required.</p>
+            </div>
+            <div class="stock-total-inv">
+                <p class="heading-ti">Your Investment:</p>
+                <div id="result-ti" class="result-ti single-inv2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="btns-container">
+        <div class="action-btns">
+            <button href="#result-container" id="stock-calculate-btn" class="stock-calculate-btn">Calculate</button>
+            <button id="repeater-btn" class="repeater-btn">+</button>
+            <button id="remover-btn" class="remover-btn">-</button>
+            <button id="stock-clear-btn">Clear Fields</button>
+            <button id="stock-reset-btn">Reset All</button>
+        </div>
+    </div>
+    <div id="result-container" class="result-container">
+        <h3 class="result-heading">Results:</h3>
+        <div class="result">
+            <div class="res-stock-unit">
+                <div class="res-sub-headings">Total Units</div>
+                <p id="total-units" class="res-sub-content">---</p>
+            </div>
+            <div class="res-stock-avg">
+                <div class="res-sub-headings">Average Cost</div>
+                <p id="average-investment" class="res-sub-content">---</p>
+            </div>
+            <div class="res-stock-total">
+                <div class="res-sub-headings">Total Investment</div>
+                <p id="total-investment" class="res-sub-content">---</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="stock-average-calc-app.js"></script>
+</body>
+</html>
