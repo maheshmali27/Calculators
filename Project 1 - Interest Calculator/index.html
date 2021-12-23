@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+<header>
+    <div class="logo"><a href="#">TAX CALC</a></div>
+    <nav class="nav">
+        <ul class="nav-ul">
+            <li class="nav-li"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-li"><a href="#" class="nav-link">Calculator</a></li>
+            <li class="nav-li"><a href="#" class="nav-link">Contact US</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="containercalc">
+    <div class="calculator">
+        <form class="taxcalc">
+            <div class="interest-calc-type">
+                <p class="calcheading">Interest Type</p>
+                <select name="sty" id="sty" class="sty">
+                    <option value="simple-interest">Simple Interest Calculator</option>
+                    <option value="compound-interest">Compound Interest Calculator</option>
+                </select>
+            </div>
+            <div class="compound-freq">
+                <label for="label-intrest-type">Compound Frequency</label>
+                <select name="select-compound-frequency" id="select-compound-frequency" class="select-compound-frequency">
+                    <option value="year">Yearly</option>
+                    <option value="quater">Quarterly</option>
+                    <option value="month">Monthly</option>
+                    <option value="week">Weekly</option>
+                    <option value="day">Daily</option>
+                </select>
+            </div>
+            <div class="principal-amount">
+                <label for="amount">Principal Amount:</label>
+                <input type="number" class="calc-input" name="amount" id="intamount" value="10000" required>
+                <p class="error" style="color: red; font-size: 14px; margin: 0 0 10px 10px; display: none; transition: all 0.5s;">Please enter amount....</p>
+            </div>
+            <div class="intrest-amount">       
+                <label for="rate">Annual Rate:</label>
+                <input type="number" class="calc-input" name="rate" id="intrate" value="10" required>
+                <p class="error" style="color: red; font-size: 14px; margin: 0 0 10px 10px; display: none; transition: all 0.5s;">Please enter intrest rate....</p>
+            </div>
+            <div class="period-unit">
+                <label for="period">Period Unit:</label>
+                <select name="select-period" id="select-period" class="select-period">
+                    <option value="year">Years</option>
+                    <option value="quater">Quarters</option>
+                    <option value="month">Months</option>
+                    <option value="week">Weeks</option>
+                    <option value="day">Days</option>
+                </select>
+            </div>
+            <div class="period-time">
+                <label for="period">Period:</label>
+                <input type="number" class="calc-input" name="period" id="intperiod" value="5" required>
+                <p class="error" style="color: red; font-size: 14px; margin: 0 0 10px 10px; display: none; transition: all 0.5s;">Please enter time period....</p>
+            </div>
+        </form>
+        <a href="#calculatorresult"><button class="btn-mobile" id="btn-mobile">GO</button></a>
+    </div>
+    <div class="calculatorresultchart">
+        <div class="chart-container">
+            <p class="chartHeading">Chart Analysis</p>
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <div class="calculatorresult" id="calculatorresult">
+        <div class="h-pri">
+            <p class="resh">Principal Amount</p>
+            <p class="resp">20000.00</p>
+        </div>
+        <div class="h-int">
+            <p class="resh">Calculated Interest</p>
+            <p class="resi">5000.00</p>
+        </div>
+        <div class="h-total">
+            <p class="resh">Total Amount</p>
+            <p class="rest">25000.00</p>
+        </div>
+    </div>
+</div>
+<script src="calculator.js"></script>
+</body>
+</html>
